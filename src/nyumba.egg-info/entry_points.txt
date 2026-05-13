@@ -1,0 +1,2 @@
+[console_scripts]
+nyumba = nyumba.cli:app

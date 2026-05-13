@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: nyumba
+Version: 0.1.0
+Summary: Community Trust Ledger prototype scaffold
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: typer
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: cryptography
+Requires-Dist: qrcode[pil]
+Requires-Dist: python-multipart
+Requires-Dist: pytest
+
+# Nyumba – PeaceTech Community Trust Ledger
+
+Built during the Andela x OpenAI Codex Accelerator.  
+**Offline‑first | Anonymous witnesses | Conflict intelligence**
+
+## Installation
+
+bash
+git clone <your-repo>
+cd nyumba
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+
+## Run the server
+
+python -m src.nyumba.server
+# or after fixing entry point: nyumba serve
+
+## CLI usage (offline)
+
+
+nyumba add --text "Share water" --location "Goma" --participants "A,B"
+nyumba witness <id> --yes
+nyumba receipt <id>

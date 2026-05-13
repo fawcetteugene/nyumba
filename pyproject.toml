@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyumba"
+version = "0.1.0"
+description = "Community Trust Ledger prototype scaffold"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer",
+    "fastapi",
+    "uvicorn[standard]",
+    "cryptography",
+    "qrcode[pil]",
+    "python-multipart",
+    "pytest",
+]
+
+[project.scripts]
+nyumba = "nyumba.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
